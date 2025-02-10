@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline-event</title>
+    <style>
+        button{
+            border: 2px solid blue;
+        }
+        input{
+            border: 2px solid green;
+            color: green;
+            padding: 5px;
+            outline: none;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- inline방식 (추천하진 않음)-->
+    <button onclick="clickEvent(this)">클릭</button> <!--this는 onclick을 뜻하고 그것을 매개변수 el로 받아왔다.-->
+    <!-- focus됐을 때랑 focus빠졌을 때를 함께 써주는 것 -->
+
+    <input type="text" onfocus="focusEvent(this)" onblur="blurEvent(this)" />
+    <script>
+      function clickEvent(el) {
+        console.log(el);
+        el.style.border = "2px solid red"
+        // console.log("click");
+      }
+      function focusEvent(el) {
+        console.log("focus on");
+        console.log(el);
+        el.style.border = "2px solid orange"
+        
+      }
+      function blurEvent(el) {
+        console.log("focus off");
+        console.log(el);
+
+      }
+    </script>
+  </body>
+</html>

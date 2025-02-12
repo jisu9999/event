@@ -127,7 +127,7 @@
     <script>
       const menuItems = document.querySelectorAll(".menu-item");
       const cards = document.querySelectorAll(".card");
-      menuItems[0].classList.add("active")
+      menuItems[0].classList.add("active");
       // console.log(menuItems);
       menuItems.forEach(function (itemMenu, index) {
         // console.log(item);
@@ -145,9 +145,8 @@
           item.classList.remove("active");
         });
         cards.forEach((cardItem) => {
-            // console.log(cardItem);
-            cardItem.classList.remove("active")
-            
+          // console.log(cardItem);
+          cardItem.classList.remove("active");
         });
         // card에 active활성화 시키는거.
         cards[index].classList.add("active");
